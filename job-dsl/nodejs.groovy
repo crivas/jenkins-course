@@ -3,7 +3,7 @@ job('NodeJS example') {
         git {
             remote {
                 github('crivas/jenkins-course.git', 'ssh')
-                credentials('crivas')
+                credentials('github')
             }            
         }
     }
