@@ -1,8 +1,10 @@
 job('NodeJS example') {
     scm {
-        git('git@github.com:crivas/jenkins-course.git') {  node -> // is hudson.plugins.git.GitSCM
-            node / gitConfigName('crivas')
-            node / gitConfigEmail('jenkins-dsl@newtech.academy')
+        git {
+            remote {
+                github('crivas/jenkins-course.git', 'ssh')
+                credentials('crivas')
+            }            
         }
     }
     triggers {
