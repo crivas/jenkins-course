@@ -2,7 +2,7 @@ job('NodeJS example') {
     scm {
         git {
             remote {
-                github('crivas/jenkins-course', 'ssh')
+                github('crivas/docker-demo', 'ssh')
                 credentials('github')
             }            
         }
